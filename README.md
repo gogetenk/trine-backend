@@ -1,2 +1,1 @@
-Pour tester en local, il faut créer une variable d'environnement GOOGLE_APPLICATION_CREDENTIALS avec le path du json d'authentification dl depuis la console google cloud.
-ex : set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
+
