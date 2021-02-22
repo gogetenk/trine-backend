@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Sogetrel.Sinapse.Framework.Bll</AssemblyName>
+    <RootNamespace>Sogetrel.Sinapse.Framework.Bll</RootNamespace>
+    <ProjectGuid>{A081FFD4-BB92-47B9-93A2-C0828C82221C}</ProjectGuid>
+    <IsPackage>true</IsPackage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
+    <ProjectReference Include="..\Model\Framework.Model.csproj" />
+  </ItemGroup>
+
+</Project>

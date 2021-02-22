@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Assistance.Operational.Model</AssemblyName>
+    <RootNamespace>Assistance.Operational.Model</RootNamespace>
+    <ProjectGuid>{AAE49881-8776-4D02-881F-986E6054B9D8}</ProjectGuid>
+  </PropertyGroup>
+
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Assistance.Operational.Dal.MongoImpl</AssemblyName>
+    <RootNamespace>Assistance.Operational.Dal.MongoImpl</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.10.4" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\src\Dal.MongoDb\Dal.MongoDb.csproj" />
+    <ProjectReference Include="..\..\Framework\src\Exceptions\Exceptions.csproj" />
+    <ProjectReference Include="..\Assistance.Operational.Dal\Dal.csproj" />
+  </ItemGroup>
+
+</Project>

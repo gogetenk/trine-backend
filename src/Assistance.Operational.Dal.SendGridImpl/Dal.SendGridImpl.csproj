@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Assistance.Operational.Dal.SendGridImpl</AssemblyName>
+    <RootNamespace>Assistance.Operational.Dal.SendGridImpl</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.4" />
+    <PackageReference Include="Sendgrid" Version="9.15.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\src\Exceptions\Exceptions.csproj" />
+    <ProjectReference Include="..\Assistance.Operational.Dal\Dal.csproj" />
+  </ItemGroup>
+
+</Project>

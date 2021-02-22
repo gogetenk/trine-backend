@@ -1,0 +1,39 @@
+# Define a directory to load monitor definitions from. Definitions take the form
+# of individual yaml files.
+heartbeat.config.monitors:
+    # Directory + glob pattern to search for configuration files
+    path: ${path.config}/monitors.d/*.yml
+    # If enabled, heartbeat will periodically check the config.monitors path for changes
+    reload.enabled: true
+    # How often to check for changes
+    reload.period: 5s
+output.elasticsearch:
+    hosts: ["elasticsearch:9200"]
+    pipeline: geoip-info
+    username: "elastic"
+    password: "changeme"
+setup.kibana:
+    host: "kibana:5601"
+    username: "elastic"
+    password: "changeme"
+heartbeat.monitors:
+    - type: http 
+      name: Local ELK Stack HTTP
+      urls: ["http://elasticsearch:9200"]
+      schedule: "@every 10s"
+      username: "elastic"
+      password: "changeme"
+    - type: http 
+      name: Trine APIs
+      urls:
+        - https://app-assistance-dev.azurewebsites.net/swagger/index.html
+      schedule: "@every 10s"
+      response.include_body: always
+      check.response:
+        status: 200
+        json:
+        - description: Check version
+          condition:
+            has_fields: ['version']            
+      fields:
+        env: development

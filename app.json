@@ -1,0 +1,8 @@
+{
+  "name": "Trine API Gateway",
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/jincod/dotnetcore.tgz"
+    }
+  ]
+}

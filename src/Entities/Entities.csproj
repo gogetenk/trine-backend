@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Assistance.Operational.Entities</AssemblyName>
+    <RootNamespace>Assistance.Operational.Entities</RootNamespace>
+  </PropertyGroup>
+ <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+ <ItemGroup>
+   <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+ </ItemGroup>
+  
+</Project>
